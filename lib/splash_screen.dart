@@ -41,7 +41,7 @@ class _splashscreenState extends State<splashscreen>with SingleTickerProviderSta
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.star,color: Colors.blue,size: 100,),
-            Text('Cities app',style:TextStyle(fontSize: 25,color: Colors.white,fontStyle:FontStyle.italic,
+            Text('Cities App',style:TextStyle(fontSize: 25,color: Colors.white,fontStyle:FontStyle.italic,
             fontWeight: FontWeight.bold,letterSpacing: 2,) ,),
                 Text('v 0.0.1',style:TextStyle(fontSize: 25,color: Colors.white,fontStyle:FontStyle.italic,
                   fontWeight: FontWeight.bold,letterSpacing: 2,) )

@@ -49,7 +49,7 @@ Random r=Random();
               onSelected: (String value) {
                 switch (value) {
                   case 'Share':
-                    print('share is called');
+
                     break;
                   case 'About':
                     Navigator.push(

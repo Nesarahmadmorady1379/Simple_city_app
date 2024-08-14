@@ -14,9 +14,12 @@ home: Scaffold(
     end: Alignment.bottomLeft)),
     child: Center(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.fromLTRB(10.0,0.0,10.0,0.0),
         child: Column(
           children: [
+            Expanded(
+              child: CircleAvatar(child: Image.asset('image/nesarahmad.jpg')),
+            ),
             Text('about developer :',style: TextStyle(fontSize: 22,fontStyle:FontStyle.italic,fontWeight: FontWeight.bold),),
           SizedBox(height: 10,),
             Text('developer name is nesarahamd morady studying at 8 semester in herat university in '
