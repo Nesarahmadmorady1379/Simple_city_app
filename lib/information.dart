@@ -1,5 +1,6 @@
 import 'package:assignement_11_app/cities.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class information extends StatefulWidget {
   final City cityData;
@@ -11,6 +12,16 @@ class information extends StatefulWidget {
 }
 
 class _informationState extends State<information> {
+  void _searchCity() async {
+    final query = Uri.encodeFull("${widget.cityData.name}");
+    final url = Uri.parse('https://www.google.com/search?q=$query');
+
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +37,7 @@ class _informationState extends State<information> {
         child: Center(
 
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(8.0,0.0,8.0,0.0),
+            padding: const EdgeInsets.fromLTRB(8.0,8.0,8.0,8.0),
             child: Column(
 
               children: [
@@ -47,7 +58,14 @@ class _informationState extends State<information> {
                     'and hase ${widget.cityData.population} population it is not alot peaople can live free'
                     'and its area is ${widget.cityData.area} anough place to have one milion people',style: TextStyle(fontStyle: FontStyle.italic,
                     letterSpacing:3,fontSize: 20,color: Colors.white)),
-
+                SizedBox(height: 30,),
+            ElevatedButton(
+                onPressed: _searchCity,
+                child: Text('Details'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(100, 50),
+                ),
+            ),
             ]
 
           ),

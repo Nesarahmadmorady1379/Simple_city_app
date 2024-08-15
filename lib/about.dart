@@ -7,6 +7,14 @@ class about extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 home: Scaffold(
+  appBar: AppBar(
+    title: Text('About Developer'),
+    centerTitle: true,
+    backgroundColor: Colors.lightGreen,
+    leading: IconButton(onPressed:(){Navigator.pop(context);
+      } ,
+      icon: Icon(Icons.arrow_back),),
+  ),
   body: Container(
     width: double.infinity,
     decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.yellow,Colors.red],

@@ -15,7 +15,7 @@ class Mainpage extends StatefulWidget {
 
 class _MainpageState extends State<Mainpage> {
   List<City> cityInfo = [
-    City('Ghoor', 'Firozkoh', 12, 23000000, '12000km', 'image/Imag1.jpg'),
+    City('Ghor', 'Firozkoh', 12, 23000000, '12000km', 'image/Imag1.jpg'),
     City('Herat', 'Hirat', 18, 230000000, '120000km', 'image/Image2.jpg'),
     City('Kabul', 'Kabul', 12, 23000000, '12000km', 'image/Image3.jpg'),
     City('Balkh', 'Mazar sharif', 12, 23000000, '12000km', 'image/Image4.jpg'),
