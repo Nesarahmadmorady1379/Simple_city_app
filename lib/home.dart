@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:share_plus/share_plus.dart';
 
 import 'about.dart';
 import 'cities.dart';
@@ -49,17 +51,15 @@ Random r=Random();
               onSelected: (String value) {
                 switch (value) {
                   case 'Share':
-
+                    Share.share('Check out this amazing app: [https://github.com/Nesarahmadmorady1379?tab=repositories]');
                     break;
                   case 'About':
                     Navigator.push(
                         context, MaterialPageRoute(builder: (context) => about()));
                     break;
-                  case 'Settings':
-                    print('setting is called');
-                    break;
+
                   case 'Exit':
-                    Navigator.pop(context);
+                    SystemNavigator.pop();
                     break;
                 }
               },
@@ -73,10 +73,7 @@ Random r=Random();
                     value: 'About',
                     child: Text('About'),
                   ),
-                  PopupMenuItem<String>(
-                    value: 'Settings',
-                    child: Text('Settings'),
-                  ),
+
                   PopupMenuItem<String>(
                     value: 'Exit',
                     child: Text('Exit'),
